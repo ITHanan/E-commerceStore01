@@ -1,0 +1,372 @@
+{
+  "products": [
+    {
+      "Id": 1,
+      "Name": "Laptop",
+      "Description": "High-performance laptop",
+      "Price": 1200.50,
+      "Stock": 0
+    },
+    {
+      "Id": 2,
+      "Name": "Smartphone",
+      "Description": "Latest model smartphone",
+      "Price": 800.00,
+      "Stock": 1
+    },
+    {
+      "Id": 3,
+      "Name": "Headphones",
+      "Description": "Noise-cancelling headphones",
+      "Price": 150.00,
+      "Stock": 20
+    }
+  ],
+  "customers": [
+    {
+      "CustomerId": 1,
+      "Name": "John Doe",
+      "Email": "john.doe@example.com",
+      "Password": "12345",
+      "Address": "123 Elm Street",
+      "OrderHistory": []
+    },
+    {
+      "CustomerId": 2,
+      "Name": "Jane Smith",
+      "Email": "jane.smith@example.com",
+      "Password": "12345",
+      "Address": "456 Oak Avenue",
+      "OrderHistory": []
+    }
+  ],
+  "orders": [
+    {
+      "OrderId": 1,
+      "CustomerId": 0,
+      "Customer": {
+        "CustomerId": 1,
+        "Name": "John Doe",
+        "Email": "john.doe@example.com",
+        "Password": "12345",
+        "Address": "123 Elm Street",
+        "OrderHistory": []
+      },
+      "Products": [
+        {
+          "Id": 1,
+          "Name": "Laptop",
+          "Description": "High-performance laptop",
+          "Price": 1200.50,
+          "Stock": 2
+        }
+      ],
+      "TotalAmount": 2401.00,
+      "OrderDate": "2024-12-07T15:56:43.467224+01:00"
+    },
+    {
+      "OrderId": 2,
+      "CustomerId": 0,
+      "Customer": {
+        "CustomerId": 1,
+        "Name": "John Doe",
+        "Email": "john.doe@example.com",
+        "Password": "12345",
+        "Address": "123 Elm Street",
+        "OrderHistory": []
+      },
+      "Products": [
+        {
+          "Id": 2,
+          "Name": "Smartphone",
+          "Description": "Latest model smartphone",
+          "Price": 800.00,
+          "Stock": 3
+        }
+      ],
+      "TotalAmount": 2400.00,
+      "OrderDate": "2024-12-07T16:21:46.7132815+01:00"
+    },
+    {
+      "OrderId": 3,
+      "CustomerId": 0,
+      "Customer": {
+        "CustomerId": 1,
+        "Name": "John Doe",
+        "Email": "john.doe@example.com",
+        "Password": "12345",
+        "Address": "123 Elm Street",
+        "OrderHistory": []
+      },
+      "Products": [
+        {
+          "Id": 2,
+          "Name": "Smartphone",
+          "Description": "Latest model smartphone",
+          "Price": 800.00,
+          "Stock": 2
+        }
+      ],
+      "TotalAmount": 1600.00,
+      "OrderDate": "2024-12-07T16:25:24.7128843+01:00"
+    },
+    {
+      "OrderId": 4,
+      "CustomerId": 0,
+      "Customer": {
+        "CustomerId": 1,
+        "Name": "John Doe",
+        "Email": "john.doe@example.com",
+        "Password": "12345",
+        "Address": "123 Elm Street",
+        "OrderHistory": []
+      },
+      "Products": [
+        {
+          "Id": 3,
+          "Name": "Headphones",
+          "Description": "Noise-cancelling headphones",
+          "Price": 150.00,
+          "Stock": 8
+        }
+      ],
+      "TotalAmount": 1200.00,
+      "OrderDate": "2024-12-07T16:27:33.8330918+01:00"
+    },
+    {
+      "OrderId": 5,
+      "CustomerId": 0,
+      "Customer": {
+        "CustomerId": 1,
+        "Name": "John Doe",
+        "Email": "john.doe@example.com",
+        "Password": "12345",
+        "Address": "123 Elm Street",
+        "OrderHistory": []
+      },
+      "Products": [
+        {
+          "Id": 1,
+          "Name": "Laptop",
+          "Description": "High-performance laptop",
+          "Price": 1200.50,
+          "Stock": 3
+        },
+        {
+          "Id": 3,
+          "Name": "Headphones",
+          "Description": "Noise-cancelling headphones",
+          "Price": 150.00,
+          "Stock": 3
+        }
+      ],
+      "TotalAmount": 4051.50,
+      "OrderDate": "2024-12-07T16:43:21.7491472+01:00"
+    },
+    {
+      "OrderId": 6,
+      "CustomerId": 0,
+      "Customer": {
+        "CustomerId": 1,
+        "Name": "John Doe",
+        "Email": "john.doe@example.com",
+        "Password": "12345",
+        "Address": "123 Elm Street",
+        "OrderHistory": []
+      },
+      "Products": [
+        {
+          "Id": 2,
+          "Name": "Smartphone",
+          "Description": "Latest model smartphone",
+          "Price": 800.00,
+          "Stock": 2
+        }
+      ],
+      "TotalAmount": 1600.00,
+      "OrderDate": "2024-12-07T17:06:08.4265841+01:00"
+    },
+    {
+      "OrderId": 7,
+      "CustomerId": 0,
+      "Customer": {
+        "CustomerId": 1,
+        "Name": "John Doe",
+        "Email": "john.doe@example.com",
+        "Password": "12345",
+        "Address": "123 Elm Street",
+        "OrderHistory": []
+      },
+      "Products": [
+        {
+          "Id": 2,
+          "Name": "Smartphone",
+          "Description": "Latest model smartphone",
+          "Price": 800.00,
+          "Stock": 2
+        }
+      ],
+      "TotalAmount": 1600.00,
+      "OrderDate": "2024-12-07T18:17:12.8520335+01:00"
+    },
+    {
+      "OrderId": 8,
+      "CustomerId": 0,
+      "Customer": {
+        "CustomerId": 1,
+        "Name": "John Doe",
+        "Email": "john.doe@example.com",
+        "Password": "12345",
+        "Address": "123 Elm Street",
+        "OrderHistory": []
+      },
+      "Products": [
+        {
+          "Id": 2,
+          "Name": "Smartphone",
+          "Description": "Latest model smartphone",
+          "Price": 800.00,
+          "Stock": 1
+        }
+      ],
+      "TotalAmount": 800.00,
+      "OrderDate": "2024-12-07T18:22:37.138528+01:00"
+    },
+    {
+      "OrderId": 9,
+      "CustomerId": 0,
+      "Customer": {
+        "CustomerId": 1,
+        "Name": "John Doe",
+        "Email": "john.doe@example.com",
+        "Password": "12345",
+        "Address": "123 Elm Street",
+        "OrderHistory": []
+      },
+      "Products": [
+        {
+          "Id": 2,
+          "Name": "Smartphone",
+          "Description": "Latest model smartphone",
+          "Price": 800.00,
+          "Stock": 1
+        }
+      ],
+      "TotalAmount": 800.00,
+      "OrderDate": "2024-12-07T18:28:31.5298572+01:00"
+    },
+    {
+      "OrderId": 10,
+      "CustomerId": 0,
+      "Customer": {
+        "CustomerId": 1,
+        "Name": "John Doe",
+        "Email": "john.doe@example.com",
+        "Password": "12345",
+        "Address": "123 Elm Street",
+        "OrderHistory": []
+      },
+      "Products": [
+        {
+          "Id": 3,
+          "Name": "Headphones",
+          "Description": "Noise-cancelling headphones",
+          "Price": 150.00,
+          "Stock": 1
+        }
+      ],
+      "TotalAmount": 150.00,
+      "OrderDate": "2024-12-07T19:43:49.0451688+01:00"
+    },
+    {
+      "OrderId": 11,
+      "CustomerId": 0,
+      "Customer": {
+        "CustomerId": 1,
+        "Name": "John Doe",
+        "Email": "john.doe@example.com",
+        "Password": "12345",
+        "Address": "123 Elm Street",
+        "OrderHistory": []
+      },
+      "Products": [
+        {
+          "Id": 3,
+          "Name": "Headphones",
+          "Description": "Noise-cancelling headphones",
+          "Price": 150.00,
+          "Stock": 1
+        }
+      ],
+      "TotalAmount": 150.00,
+      "OrderDate": "2024-12-07T19:58:35.3596777+01:00"
+    },
+    {
+      "OrderId": 12,
+      "CustomerId": 0,
+      "Customer": {
+        "CustomerId": 1,
+        "Name": "John Doe",
+        "Email": "john.doe@example.com",
+        "Password": "12345",
+        "Address": "123 Elm Street",
+        "OrderHistory": []
+      },
+      "Products": [
+        {
+          "Id": 3,
+          "Name": "Headphones",
+          "Description": "Noise-cancelling headphones",
+          "Price": 150.00,
+          "Stock": 1
+        }
+      ],
+      "TotalAmount": 150.00,
+      "OrderDate": "2024-12-07T20:06:56.6617941+01:00"
+    },
+    {
+      "OrderId": 13,
+      "CustomerId": 0,
+      "Customer": {
+        "CustomerId": 1,
+        "Name": "John Doe",
+        "Email": "john.doe@example.com",
+        "Password": "12345",
+        "Address": "123 Elm Street",
+        "OrderHistory": []
+      },
+      "Products": [
+        {
+          "Id": 3,
+          "Name": "Headphones",
+          "Description": "Noise-cancelling headphones",
+          "Price": 150.00,
+          "Stock": 1
+        }
+      ],
+      "TotalAmount": 150.00,
+      "OrderDate": "2024-12-07T20:09:24.1406933+01:00"
+    }
+  ],
+  "carts": [
+    {
+      "CustomerId": 2,
+      "Products": null,
+      "Customer": null,
+      "TotalAmount": 800.00
+    },
+    {
+      "CustomerId": 1,
+      "Products": [],
+      "Customer": {
+        "CustomerId": 1,
+        "Name": "John Doe",
+        "Email": "john.doe@example.com",
+        "Password": "12345",
+        "Address": "123 Elm Street",
+        "OrderHistory": []
+      },
+      "TotalAmount": 0
+    }
+  ]
+}
