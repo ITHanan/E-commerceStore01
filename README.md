@@ -48,7 +48,6 @@ Usage 🛠️
 Running the Application
 Build and run the project:
 
-bash
 نسخ الكود
 dotnet run
 Login using an existing customer:
