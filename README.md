@@ -1,6 +1,8 @@
 # E-Commerce Store Application 🛒
 
 Welcome to the **E-Commerce Store Application**, a simple yet powerful console-based shopping system built with C#. This application enables users to browse products, add them to a cart, checkout, and view order history, all while practicing core software development principles like OOP, generics, and JSON data handling.
+      "Password": "12345",
+
 
 ---
 
@@ -68,32 +70,7 @@ Products: List of all available products.
 Customers: Customer details (ID, Name, Email, Password, Address, Order History).
 Carts: Cart details for logged-in customers.
 Orders: Order history for each customer.
-Example JSON
-json
-نسخ الكود
-{
-  "products": [
-    {
-      "Id": 1,
-      "Name": "Laptop",
-      "Description": "High-performance laptop",
-      "Price": 1200.50,
-      "Stock": 10
-    }
-  ],
-  "customers": [
-    {
-      "CustomerId": 1,
-      "Name": "John Doe",
-      "Email": "john.doe@example.com",
-      "Password": "12345",
-      "Address": "123 Elm Street",
-      "OrderHistory": []
-    }
-  ],
-  "carts": [],
-  "orders": []
-}
+
 Key Functionalities 🔑
 1. Login and Authentication
 Customers must log in with a valid ID and password before accessing features.
