@@ -142,11 +142,10 @@ namespace E_commerceStore01
                 }
 
                 // Add product to cart
-                var cartProduct = Cart.Products.FirstOrDefault(p => p.Id == productId);
 
-                if (cartProduct == null)
+                if (selectedProduct != null)
                 {
-                    cartProduct = new Product
+                    var addedProduct = new Product
                     (
                         selectedProduct.Id,
                         selectedProduct.Name,
@@ -154,12 +153,13 @@ namespace E_commerceStore01
                         selectedProduct.Price,
                         quantity // Treat stock as quantity in the cart
                     );
-                    Cart.Products.Add(cartProduct);
+                     Cart.Products.Add(addedProduct);
                 }
                 else
                 {
                     // Update the quantity in the cart if the product already exists
-                    cartProduct.Stock += quantity;
+                    var alreadyExistingProductInCart = Cart.Products.Where(product => product.Id == selectedProduct.Id).FirstOrDefault();
+                    alreadyExistingProductInCart.Stock += quantity;
                 }
 
                 // Update stock in the store

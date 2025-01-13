@@ -12,14 +12,14 @@
       "Name": "Smartphone",
       "Description": "Latest model smartphone",
       "Price": 800.00,
-      "Stock": 1
+      "Stock": 0
     },
     {
       "Id": 3,
       "Name": "Headphones",
       "Description": "Noise-cancelling headphones",
       "Price": 150.00,
-      "Stock": 20
+      "Stock": 0
     }
   ],
   "customers": [
@@ -346,12 +346,96 @@
       ],
       "TotalAmount": 150.00,
       "OrderDate": "2024-12-07T20:09:24.1406933+01:00"
+    },
+    {
+      "OrderId": 14,
+      "CustomerId": 0,
+      "Customer": {
+        "CustomerId": 1,
+        "Name": "John Doe",
+        "Email": "john.doe@example.com",
+        "Password": "12345",
+        "Address": "123 Elm Street",
+        "OrderHistory": []
+      },
+      "Products": [
+        {
+          "Id": 3,
+          "Name": "Headphones",
+          "Description": "Noise-cancelling headphones",
+          "Price": 150.00,
+          "Stock": 1
+        }
+      ],
+      "TotalAmount": 150.00,
+      "OrderDate": "2024-12-11T09:23:21.9093476+01:00"
+    },
+    {
+      "OrderId": 15,
+      "CustomerId": 0,
+      "Customer": {
+        "CustomerId": 1,
+        "Name": "John Doe",
+        "Email": "john.doe@example.com",
+        "Password": "12345",
+        "Address": "123 Elm Street",
+        "OrderHistory": []
+      },
+      "Products": [
+        {
+          "Id": 3,
+          "Name": "Headphones",
+          "Description": "Noise-cancelling headphones",
+          "Price": 150.00,
+          "Stock": 3
+        },
+        {
+          "Id": 2,
+          "Name": "Smartphone",
+          "Description": "Latest model smartphone",
+          "Price": 800.00,
+          "Stock": 1
+        }
+      ],
+      "TotalAmount": 1250.00,
+      "OrderDate": "2024-12-21T18:27:05.1187891+01:00"
+    },
+    {
+      "OrderId": 16,
+      "CustomerId": 0,
+      "Customer": {
+        "CustomerId": 1,
+        "Name": "John Doe",
+        "Email": "john.doe@example.com",
+        "Password": "12345",
+        "Address": "123 Elm Street",
+        "OrderHistory": []
+      },
+      "Products": [
+        {
+          "Id": 3,
+          "Name": "Headphones",
+          "Description": "Noise-cancelling headphones",
+          "Price": 150.00,
+          "Stock": 1
+        }
+      ],
+      "TotalAmount": 150.00,
+      "OrderDate": "2025-01-13T14:56:06.7125345+01:00"
     }
   ],
   "carts": [
     {
       "CustomerId": 2,
-      "Products": null,
+      "Products": [
+        {
+          "Id": 3,
+          "Name": "Headphones",
+          "Description": "Noise-cancelling headphones",
+          "Price": 150.00,
+          "Stock": 10
+        }
+      ],
       "Customer": null,
       "TotalAmount": 800.00
     },
