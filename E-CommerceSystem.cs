@@ -153,7 +153,7 @@ namespace E_commerceStore01
                         selectedProduct.Price,
                         quantity // Treat stock as quantity in the cart
                     );
-                    Cart.Products.Add(addedProduct);
+                     Cart.Products.Add(addedProduct);
                 }
                 else
                 {
