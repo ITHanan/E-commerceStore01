@@ -1,0 +1,85 @@
+name: PR Build & Discord Notify
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test --no-build --configuration Release
+
+      # -------------------- SUCCESS MESSAGE --------------------
+      - name: Discord Notification (Success)
+        if: success()
+        run: |
+          SUCCESS_GIF="https://media.giphy.com/media/111ebonMs90YLu/giphy.gif"
+          repo="${{ github.event.repository.html_url }}"
+          pr="${{ github.event.pull_request.number }}"
+          actor="${{ github.actor }}"
+
+          payload=$(jq -n \
+            --arg title "Build Success 🎉" \
+            --arg msg "PR #$pr by **$actor** passed successfully." \
+            --arg repo "$repo" \
+            --arg pr_url "$repo/pull/$pr" \
+            --arg gif "$SUCCESS_GIF" \
+            '{
+              embeds: [{
+                title: $title,
+                description: ($msg + "\n\n🔗 **Repo:** " + $repo + "\n🔗 **PR:** " + $pr_url),
+                color: 3066993,
+                image: { url: $gif }
+              }]
+            }'
+          )
+
+          curl -X POST -H "Content-Type: application/json" \
+               -d "$payload" \
+               "${{ secrets.DISCORD_WEBHOOK }}"
+
+      # -------------------- FAILURE MESSAGE --------------------
+      - name: Discord Notification (Failure)
+        if: failure()
+        run: |
+          FAIL_GIF="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif"
+          repo="${{ github.event.repository.html_url }}"
+          pr="${{ github.event.pull_request.number }}"
+          actor="${{ github.actor }}"
+
+          payload=$(jq -n \
+            --arg title "Build Failed 💀" \
+            --arg msg "PR #$pr by **$actor** has failed the build." \
+            --arg repo "$repo" \
+            --arg pr_url "$repo/pull/$pr" \
+            --arg gif "$FAIL_GIF" \
+            '{
+              embeds: [{
+                title: $title,
+                description: ($msg + "\n\n🔗 **Repo:** " + $repo + "\n🔗 **PR:** " + $pr_url),
+                color: 15158332,
+                image: { url: $gif }
+              }]
+            }'
+          )
+
+          curl -X POST -H "Content-Type: application/json" \
+               -d "$payload" \
+               "${{ secrets.DISCORD_WEBHOOK }}"
